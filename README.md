@@ -2,6 +2,6 @@
 
 ## Online Demos
 
-* [Shirne Dialog](shirne_dialog/)
+* [Shirne Dialog](dialog/)
 
 * [Chinese Chess](chinese_chess/)
