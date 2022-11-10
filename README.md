@@ -12,6 +12,7 @@
 
 * ZXing Dart
     - [git](https://github.com/shirne/zxing-dart)
+    - [demo](zxing_demo/)
 
 * ShirneCMS
     - [git](https://github.com/shirne/ShirneCMS)
