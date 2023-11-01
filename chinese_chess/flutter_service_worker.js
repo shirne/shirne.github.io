@@ -2,10 +2,9 @@
 const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
-const RESOURCES = {
-  "assets/AssetManifest.json": "e2d45edfd6db9fa5eb2612485a29505c",
-"assets/assets/engines/BOOK.DAT": "cd62f02f4c31121802e9560cf5694209",
-"assets/assets/engines/eleeye.exe": "06dbc98052a17b1aa033e7ef77607493",
+
+const RESOURCES = {"assets/AssetManifest.bin": "f326ecf4c61dd612e596312cf239092c",
+"assets/AssetManifest.json": "8444cf2c060ab38088e24602f4ecb949",
 "assets/assets/images/action_background.png": "982bdaa0714b1dc1a0b933994ee03ff3",
 "assets/assets/images/action_checkmate.png": "b9b279cb12aca593c1cab441353d8654",
 "assets/assets/images/action_eat.png": "c39bc252c5728962f518be4ded795314",
@@ -40,28 +39,46 @@ const RESOURCES = {
 "assets/assets/sounds/newgame.wav": "ba9a4c1abd561a5158ec5b0fd4c8a7a4",
 "assets/assets/sounds/win.wav": "3b90f04f72bd7c2d4bb6395e6112bf07",
 "assets/FontManifest.json": "8d9ed386105956ca48b6cea9b5e793b2",
-"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
-"assets/NOTICES": "662b27466bca7e867fe934f001e05ed5",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
-"assets/packages/shirne_dialog/assets/fonts/icons.ttf": "524bbbef125d14f9005236a64a4c90f1",
+"assets/fonts/MaterialIcons-Regular.otf": "3af868584217028bd6f122613bff2a41",
+"assets/NOTICES": "c139fe9e3210a4dae398f9580046de59",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "89ed8f4e49bcdfc0b5bfc9b24591e347",
+"assets/packages/engine_darwin/assets/engines/eleeye/BOOK.DAT": "cd62f02f4c31121802e9560cf5694209",
+"assets/packages/engine_darwin/assets/engines/eleeye/eleeye": "c4d23eb75eb23cab01824ebf804f191c",
+"assets/packages/engine_darwin/assets/engines/pikafish/pikafish": "866a9720a27489d600d3e7325eea8591",
+"assets/packages/engine_darwin/assets/engines/pikafish/pikafish-m": "784ee7043830be5e8b7f0f906bf23b26",
+"assets/packages/engine_darwin/assets/engines/pikafish/pikafish.nnue": "0c8fa30c4a7093c22bcec37c504fd3b0",
+"assets/packages/engine_linux/assets/engines/eleeye/BOOK.DAT": "cd62f02f4c31121802e9560cf5694209",
+"assets/packages/engine_linux/assets/engines/eleeye/eleeye": "2140b0afb7f7196f80e8a5aaa8114ad1",
+"assets/packages/engine_linux/assets/engines/pikafish/pikafish": "d9df1273281ae669372e242398089319",
+"assets/packages/engine_linux/assets/engines/pikafish/pikafish.nnue": "0c8fa30c4a7093c22bcec37c504fd3b0",
+"assets/packages/engine_windows/assets/engines/eleeye/BOOK.DAT": "cd62f02f4c31121802e9560cf5694209",
+"assets/packages/engine_windows/assets/engines/eleeye/eleeye.exe": "06dbc98052a17b1aa033e7ef77607493",
+"assets/packages/engine_windows/assets/engines/pikafish/pikafish.exe": "c7f3e9e4dfa23888764ec3271c770d7f",
+"assets/packages/engine_windows/assets/engines/pikafish/pikafish.nnue": "0c8fa30c4a7093c22bcec37c504fd3b0",
+"assets/packages/shirne_dialog/assets/fonts/icons.ttf": "b61ba47765ff7e53c2b1a4dc63ec1e4c",
 "assets/packages/window_manager/images/ic_chrome_close.png": "75f4b8ab3608a05461a31fc18d6b47c2",
 "assets/packages/window_manager/images/ic_chrome_maximize.png": "af7499d7657c8b69d23b85156b60298c",
 "assets/packages/window_manager/images/ic_chrome_minimize.png": "4282cd84cb36edf2efb950ad9269ca62",
 "assets/packages/window_manager/images/ic_chrome_unmaximize.png": "4a90c1909cb74e8f0d35794e2f61d8bf",
-"assets/shaders/ink_sparkle.frag": "9eb8a7030c1073cc04ae1667e267e9e2",
-"canvaskit/canvaskit.js": "2bc454a691c631b07a9307ac4ca47797",
-"canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62",
-"canvaskit/profiling/canvaskit.js": "38164e5a72bdad0faa4ce740c9b8e564",
-"canvaskit/profiling/canvaskit.wasm": "95a45378b69e77af5ed2bc72b2209b94",
+"assets/shaders/ink_sparkle.frag": "f8b80e740d33eb157090be4e995febdf",
+"/canvaskit/canvaskit.js": "bbf39143dfd758d8d847453b120c8ebb",
+"/canvaskit/canvaskit.wasm": "42df12e09ecc0d5a4a34a69d7ee44314",
+"/canvaskit/chromium/canvaskit.js": "96ae916cd2d1b7320fff853ee22aebb0",
+"/canvaskit/chromium/canvaskit.wasm": "be0e3b33510f5b7b0cc76cc4d3e50048",
+"/canvaskit/profiling/canvaskit.js": "c21852696bc1cc82e8894d851c01921a",
+"/canvaskit/profiling/canvaskit.wasm": "371bc4e204443b0d5e774d64a046eb99",
+"/canvaskit/skwasm.js": "95f16c6690f955a45b2317496983dbe9",
+"/canvaskit/skwasm.wasm": "1a074e8452fe5e0d02b112e22cdcf455",
+"/canvaskit/skwasm.worker.js": "51253d3321b11ddb8d73fa8aa87d3b15",
 "favicon.png": "a68b91f7217890c5c4885ae2d17cd1c9",
-"flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
+"flutter.js": "6b515e434cea20006b3ef1726d2c8894",
 "icons/Icon-192.png": "654e81dc7656411088d55c5933ecfb73",
 "icons/Icon-512.png": "225ab4376fc3c32ac34f6e81a29bdac1",
 "icons/Icon-maskable-192.png": "654e81dc7656411088d55c5933ecfb73",
 "icons/Icon-maskable-512.png": "225ab4376fc3c32ac34f6e81a29bdac1",
-"index.html": "a43c945c71cf6aa5723895b16ad7b982",
-"/": "a43c945c71cf6aa5723895b16ad7b982",
-"main.dart.js": "7a1cf13e01a908ed63522ff9567a2f89",
+"index.html": "bf2446f20a9cf3299f9dfd23b9656d1e",
+"/": "bf2446f20a9cf3299f9dfd23b9656d1e",
+"main.dart.js": "2c3ded4dba619a67e7f265b7536ab85f",
 "manifest.json": "8168db986bd7c279c14f89bcdb0ac190",
 "splash/img/dark-1x.png": "95326c40fd65529a277c9e785222ee44",
 "splash/img/dark-2x.png": "eec3a7cfc4d3dc5ffdf21fea49124d36",
@@ -73,16 +90,14 @@ const RESOURCES = {
 "splash/img/light-4x.png": "6b82ed6d91c0e3a97540cf1050f573e8",
 "splash/splash.js": "c6a271349a0cd249bdb6d3c4d12f5dcf",
 "splash/style.css": "db6178791b6369b77311c0ae92809585",
-"version.json": "28058f287638edbbdf7419c3ecd3911b"
-};
-
+"version.json": "28058f287638edbbdf7419c3ecd3911b"};
 // The application shell files that are downloaded before a service worker can
 // start.
-const CORE = [
-  "main.dart.js",
+const CORE = ["main.dart.js",
 "index.html",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
+
 // During install, the TEMP cache is populated with the application shell files.
 self.addEventListener("install", (event) => {
   self.skipWaiting();
@@ -93,7 +108,6 @@ self.addEventListener("install", (event) => {
     })
   );
 });
-
 // During activate, the cache is populated with the temp files downloaded in
 // install. If this service worker is upgrading from one with a saved
 // MANIFEST, then use this to retain unchanged resource files.
@@ -115,6 +129,8 @@ self.addEventListener("activate", function(event) {
         await caches.delete(TEMP);
         // Save the manifest to make future upgrades efficient.
         await manifestCache.put('manifest', new Response(JSON.stringify(RESOURCES)));
+        // Claim client to enable caching on first launch
+        self.clients.claim();
         return;
       }
       var oldManifest = await manifest.json();
@@ -140,6 +156,8 @@ self.addEventListener("activate", function(event) {
       await caches.delete(TEMP);
       // Save the manifest to make future upgrades efficient.
       await manifestCache.put('manifest', new Response(JSON.stringify(RESOURCES)));
+      // Claim client to enable caching on first launch
+      self.clients.claim();
       return;
     } catch (err) {
       // On an unhandled exception the state of the cache cannot be guaranteed.
@@ -150,7 +168,6 @@ self.addEventListener("activate", function(event) {
     }
   }());
 });
-
 // The fetch handler redirects requests for RESOURCE files to the service
 // worker cache.
 self.addEventListener("fetch", (event) => {
@@ -190,7 +207,6 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
-
 self.addEventListener('message', (event) => {
   // SkipWaiting can be used to immediately activate a waiting service worker.
   // This will also require a page refresh triggered by the main worker.
@@ -203,7 +219,6 @@ self.addEventListener('message', (event) => {
     return;
   }
 });
-
 // Download offline will check the RESOURCES for all files not in the cache
 // and populate them.
 async function downloadOffline() {
@@ -224,7 +239,6 @@ async function downloadOffline() {
   }
   return contentCache.addAll(resources);
 }
-
 // Attempt to download the resource online before falling back to
 // the offline cache.
 function onlineFirst(event) {
