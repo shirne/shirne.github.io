@@ -20,9 +20,13 @@
 * Flutter Juejin
     - [git](https://github.com/fluttercandies/flutter_juejin)
 
-* 
+* Progress Border
+    - [git](https://github.com/shirne/progress_border)
+    - [demo](progress_border/)
 
-* 
+* Borders
+    - [git](https://github.com/shirne/flutter_borders)
+    - [demo](borders/)
 
 
 
