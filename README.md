@@ -34,4 +34,4 @@
 
 
 ---
-[Github](https://github.com/shirne/) [Gitee](https://gitee.com/shirne/) [Blog](https://shirne.com/) [掘金](https://juejin.cn/user/1179150008458574)
+[Github](https://github.com/shirne/) [Gitee](https://gitee.com/shirne/) [Blog](https://shirne.com/) [掘金](https://juejin.cn/user/1179150008458574) [Packages](https://pub.dev/publishers/shirne.com/packages)
