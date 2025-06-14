@@ -3,37 +3,44 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "5b2454bddfcf3181b2946bc3460c61a8",
-"assets/AssetManifest.json": "392580e674bc0fda53bebf34fad7b6d5",
-"assets/FontManifest.json": "c3617f3739ff6f84f01ab4719c01af8b",
-"assets/fonts/MaterialIcons-Regular.otf": "1be007070bd0574c2165cee1a592e98a",
-"assets/NOTICES": "7445c01c44dd8c3b3c82ee6b123ad6d3",
-"assets/packages/shirne_dialog/assets/fonts/icons.ttf": "b61ba47765ff7e53c2b1a4dc63ec1e4c",
-"assets/shaders/ink_sparkle.frag": "f8b80e740d33eb157090be4e995febdf",
-"/canvaskit/canvaskit.js": "bbf39143dfd758d8d847453b120c8ebb",
-"/canvaskit/canvaskit.wasm": "42df12e09ecc0d5a4a34a69d7ee44314",
-"/canvaskit/chromium/canvaskit.js": "96ae916cd2d1b7320fff853ee22aebb0",
-"/canvaskit/chromium/canvaskit.wasm": "be0e3b33510f5b7b0cc76cc4d3e50048",
-"/canvaskit/skwasm.js": "95f16c6690f955a45b2317496983dbe9",
-"/canvaskit/skwasm.wasm": "1a074e8452fe5e0d02b112e22cdcf455",
-"/canvaskit/skwasm.worker.js": "51253d3321b11ddb8d73fa8aa87d3b15",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"flutter.js": "6b515e434cea20006b3ef1726d2c8894",
-"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
-"icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "39af98795acaa948987364f26b79c6cb",
-"/": "39af98795acaa948987364f26b79c6cb",
-"main.dart.js": "cba14bee8bd6e06627309da3d00422cb",
-"manifest.json": "87e8c896d85947510bb672cd8d9df96b",
-"version.json": "ff966ab969ba381b900e61629bfb9789"};
+const RESOURCES = {
+  "assets/AssetManifest.bin": "5b2454bddfcf3181b2946bc3460c61a8",
+  "assets/AssetManifest.bin.json": "8cd4669590289adde7f68bd56888ffac",
+  "assets/AssetManifest.json": "392580e674bc0fda53bebf34fad7b6d5",
+  "assets/FontManifest.json": "e63bd7fd549e43931b6f18610d52b2af",
+  "assets/fonts/MaterialIcons-Regular.otf": "249f133756dd1d6e4887373576c9403b",
+  "assets/NOTICES": "fda18618b032954be6a79c119719ff21",
+  "assets/packages/shirne_dialog/assets/fonts/icons.ttf": "b61ba47765ff7e53c2b1a4dc63ec1e4c",
+  "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
+  "/canvaskit/canvaskit.js": "728b2d477d9b8c14593d4f9b82b484f3",
+  "/canvaskit/canvaskit.js.symbols": "bdcd3835edf8586b6d6edfce8749fb77",
+  "/canvaskit/canvaskit.wasm": "7a3f4ae7d65fc1de6a6e7ddd3224bc93",
+  "/canvaskit/chromium/canvaskit.js": "8191e843020c832c9cf8852a4b909d4c",
+  "/canvaskit/chromium/canvaskit.js.symbols": "b61b5f4673c9698029fa0a746a9ad581",
+  "/canvaskit/chromium/canvaskit.wasm": "f504de372e31c8031018a9ec0a9ef5f0",
+  "/canvaskit/skwasm.js": "ea559890a088fe28b4ddf70e17e60052",
+  "/canvaskit/skwasm.js.symbols": "e72c79950c8a8483d826a7f0560573a1",
+  "/canvaskit/skwasm.wasm": "39dd80367a4e71582d234948adc521c0",
+  "favicon.png": "5dcef449791fa27946b3d35ad8803796",
+  "flutter.js": "83d881c1dbb6d6bcd6b42e274605b69c",
+  "flutter_bootstrap.js": "cc714c63f48fa885c778476684f6576d",
+  "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
+  "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
+  "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
+  "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
+  "index.html": "3adf57e9b3b3b71fe0921430f92188ff",
+  "/": "3adf57e9b3b3b71fe0921430f92188ff",
+  "main.dart.js": "846686933df5a20fc7f2c715cd7e88ed",
+  "manifest.json": "a95e092523b23e3833402187e979070a",
+  "version.json": "ff966ab969ba381b900e61629bfb9789"
+};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
-"index.html",
-"assets/AssetManifest.json",
-"assets/FontManifest.json"];
+  "index.html",
+  "flutter_bootstrap.js",
+  "assets/AssetManifest.bin.json",
+  "assets/FontManifest.json"];
 
 // During install, the TEMP cache is populated with the application shell files.
 self.addEventListener("install", (event) => {
@@ -41,15 +48,15 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value, {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, { 'cache': 'reload' })));
     })
   );
 });
 // During activate, the cache is populated with the temp files downloaded in
 // install. If this service worker is upgrading from one with a saved
 // MANIFEST, then use this to retain unchanged resource files.
-self.addEventListener("activate", function(event) {
-  return event.waitUntil(async function() {
+self.addEventListener("activate", function (event) {
+  return event.waitUntil(async function () {
     try {
       var contentCache = await caches.open(CACHE_NAME);
       var tempCache = await caches.open(TEMP);
@@ -130,7 +137,7 @@ self.addEventListener("fetch", (event) => {
     return onlineFirst(event);
   }
   event.respondWith(caches.open(CACHE_NAME)
-    .then((cache) =>  {
+    .then((cache) => {
       return cache.match(event.request).then((response) => {
         // Either respond with the cached resource, or perform a fetch and
         // lazily populate the cache only if the resource was successfully fetched.
